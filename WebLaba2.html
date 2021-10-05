@@ -1,0 +1,408 @@
+<html>
+	<head>
+		<meta charset="UTF-8"> <!-- кодировка символов документа-->
+		<meta name="description" lang="ru" content="Описание содержимого страницы">
+		<meta name="keywords" lang="ru" content="ключевые слова через запятую">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>kotogram</title>
+		<link rel="icon" href="https://iconarchive.com/download/i95569/iconsmind/outline/Black-Cat.ico" type="image/x-icon">
+		<script>
+		function toggleMenu(){
+			let menu = document.getElementById("menu");
+			if (menu.style.display == "block"){
+				menu.style.display = "none";
+			} else {
+				menu.style.display = "block";
+			}
+		}
+		</script>
+		<style>	
+		.flex-container {
+			display: flex;
+			flex-flow: column;
+		}
+		.flex-box {
+			display: flex;
+			flex-direction: column;
+			background-color: #b290eb;
+			margin-top: 15px;
+			padding: 20px;
+			font-size: 18px;
+			border-radius: 5px;
+			border-top: 3px solid gray;
+			border-left: 3px solid gray;
+		}
+		.flex-title {
+		  margin-top:5px;
+		  height: 50px;
+		  background: #b290eb;
+		  border-radius: 5px;
+		  border-top: 3px solid gray;
+		  border-left: 3px solid gray;
+		}
+		.flex-profile-info{
+		  background-color: darkBlue;
+		  margin-left: 15px;
+		  margin-right: 15px;
+		  padding: 10px;
+		  color: white;
+		  border-radius: 5px;
+		  border-top: 3px solid gray;
+		  border-left: 3px solid gray; 
+		}
+		.flex-profile-item{
+		  
+		}
+		.flex-blog{
+		  background-color: darkBlue;
+		  border-radius: 5px;
+		  border-left: 3px solid gray; 
+		  border-top: 3px solid gray; 
+		  margin-left: 15px; 
+		  margin-top:20px; 
+		  margin-right: 20px; 
+		  padding: 10px;
+		}
+		.flex-blog-comments{
+			margin-top:5px;
+			display: flex;
+			text-align: center;
+			flex-direction: row;
+			justify-content: end;
+		}
+		.blog-foto {
+            width: 40%;
+			min-width: 10%;
+			height: auto;
+            margin: auto;
+        }
+		.blog-miniava {
+            width: 28px;
+            margin: auto;
+			border-radius:14px;
+        }	
+		.blog-comments-item {
+            padding: 3px;
+        }	
+		.blog-icon {
+            width: 25px;
+			padding-right:3px;
+			vertical-align: middle;
+        }	
+		
+		body {
+			font-family: Verdana;
+			margin: 0;
+			background:#83b7eb ;
+		}
+		p{
+			margin:10px;
+			margin-top:10px;
+			margin-left:10px;
+		}
+		span{
+			padding-left: 10px;
+			box-decoration-break: clone;
+			-webkit-box-decoration-break: clone;
+		}
+		.header {
+			display:flex;
+			justify-content: space-between;
+			padding: 10px;
+			text-align: left;
+			background: #b290eb;
+			color: white;
+			font-size: 18px;
+			border-radius: 5px;
+			border-top: 3px solid gray;
+			border-left: 3px solid gray;
+			margin:15px;
+			margin-top:10px;
+		}
+		aside {
+			border-top: 3px solid gray;
+			border-left: 3px solid gray;
+			background: #b290eb;
+			color: #666;
+			font-size: 14px;
+			text-align: center;
+			justify-content: center;
+			margin-left: 10px;
+			margin-right: 15px;
+			width: 130px;
+			height: 222px;
+			float: right;
+			border-radius: 5px;
+		}
+		section {
+			background: #b290eb;
+			margin:15px;
+			float: left;
+		}
+		.footer {
+		  margin:15px;
+		  margin-bottom: 0px;
+		  height: 70px;
+		  background: #b290eb;
+		  border-radius: 5px;
+		  border-top: 3px solid gray;
+		  border-left: 3px solid gray;
+		  text-align: center;
+		  font-size: 14px;
+		  padding: 5px;
+		}
+		
+		hr {
+			border: none; 
+			background-color: #ddd; 
+			color: #ddd; 
+			height: 1px; 
+			margin-top: 5px;
+		}
+		
+        *, *:after, *:before {
+		   box-sizing: border-box;
+		   padding: 0;
+		   margin: 0;
+		   transition: .5s ease-in-out;
+		}
+
+		.dropdown{
+			float: right;
+		}
+		
+		#menu {
+		   float: right;
+		}
+		#menu li {
+		   display: inline-block;
+		   margin-right: 30px;
+		}
+		#menu a {
+		   color: #111;
+		   text-transform: uppercase;
+		   letter-spacing: 1px;
+		   font-weight: 600;
+		   display: block;
+		   line-height: 40px;
+		}
+		#menu a:hover {
+		   color: #EF5A42;
+		}
+		#menu li:last-child {
+		   margin-right: 0;
+		}
+		
+		ul {
+			list-style: none;
+		}
+		a {
+		   text-decoration: none;
+		   outline: none;
+		}
+		.notification-circle {
+			display: inline-block;
+			width: 24px;
+			line-height: 24px;
+			border-radius: 50%;
+			text-align: center;
+			font-size: 16px;
+			font-weight: 200;
+			color: #fff;
+			background: #d00
+		}
+
+			
+		.menubtn {
+				display: none;
+				position: relative;
+				float: right;
+				width: 40px;
+				height: 40px;
+				margin-left: 20px;
+				background: darkBlue;
+				cursor: pointer;
+				border-radius: 4px;
+			}	
+			
+		.menubtn-icon-line {
+			position: absolute;
+			margin: auto 0;
+			top: 0;
+			bottom: 0;
+			left: 6px;
+			right: 0;
+			width: 65%;
+			height: 1px;
+			flex: none;
+			background: #e2deab;
+			border-radius: 2px;
+			transition: transform .05s ease;
+			backface-visibility: hidden;
+		}
+		.menubtn-icon-line_top {
+			width: 51%;
+			left: 11px;
+			transform: translateY(-8px);
+		}
+		.menubtn-icon-line_bottom {
+			width: 47%;
+			left: 12px;
+			transform: translateY(8px);
+		}
+		
+		
+		@media handheld, screen and (max-width: 1080px) {
+				.menubtn {
+				   display: block;
+				}
+				aside{
+				   display: none;
+				}
+				
+				header {
+				   padding: 10px 0;
+				}
+		 
+				.flex-profile-info{
+					display: flex;
+					flex-direction: column;
+				}
+				.flex-blog-comments{	
+					flex-direction: column;
+				}
+				#avatarka{
+					align:center;
+				}
+				#menu {
+				  float: right;
+				  position: absolute;
+				  overflow: hidden;
+				  display: none;
+				  padding: 10px;
+				  text-align: left;
+				  background: #b290eb;
+				  right: 0;
+				  top: 55px;
+				  color: white;
+				  font-size: 18px;
+				  border-radius: 5px;
+				  border-top: 3px solid gray;
+				  border-left: 3px solid gray;
+				  margin:15px;
+				  margin-top:10px;
+				}
+
+				#menu li {
+				   display: block;
+				   text-align: center;
+				   border-bottom: 1px solid #EBEBE3;
+				   margin-right: 0;
+				}
+			}
+			
+			@media (min-width: 1080px) {
+				.menubtn {
+				   display: none;
+				}
+				
+				#menu {
+				  display: flex;
+				  float: right;
+				}
+			}
+			
+	
+
+		</style>
+	</head>
+	
+	<body>
+		<div class="header">
+			<h1>Котограм</h1>
+		
+			<div class="dropdown"> 
+			  <button class="menubtn" onclick="toggleMenu();">
+				<span class="menubtn-icon-line menubtn-icon-line_top" style="padding: 0;"></span>
+				<span class="menubtn-icon-line" style="padding: 0;"></span>
+				<span class="menubtn-icon-line menubtn-icon-line_bottom" style="padding: 0;"></span>
+			  </button>
+				<ul id="menu">
+					<li><a href="">Главная</a></li>
+					<li><a href="">Сообщество</a></li>
+					<li><a href="">Пользователи</a></li>
+					<li><a href="">Новое<div class="notification-circle">3</div> </a> </li>
+				</ul>
+			</div>  
+		</div>
+
+		<aside>
+			<p>Реклама заблокирована AdBlock</p>
+		</aside>
+
+		<div class="flex-container">
+			<div class="flex-profile-info">
+				<div class="flex-profile-item" style="padding-left: 10px;">
+					<img src="https://icdn.lenta.ru/images/2019/10/06/13/20191006135047104/square_1280_55d23da46a4b99f74eedbba9ec98aa80.jpg" border="2px" width="200px" margin="15px" align="left" alt="аватарка"></div>
+				<div class="flex-profile-item">
+					<span style="font-size: 27px;"><b>кот Котофей</b></span><br><br></div>
+				<div class="flex-profile-item">
+					<span style="font-size: 20px">Дата рождения: 27.08.2017</span><br><br></div>
+				<div class="flex-profile-item">
+					<span style="font-size: 20px">Профессия: сырный дегустатор</span><br><br></div>
+			</div>
+		</div>
+		
+		<div class="flex-blog">
+			<div class="flex-title">
+				<h3 style="padding: 10px">Стена записочек</h3>
+			</div>
+			<div class="flex-box">
+				<article> 
+					<img class="blog-miniava" src="https://icdn.lenta.ru/images/2019/10/06/13/20191006135047104/square_1280_55d23da46a4b99f74eedbba9ec98aa80.jpg" border="1px" margin="15px" align="left" alt="аватарка">
+					<span style="font-size: 22px;"><b>рецензия на сыр из столовки итмо</b></span>
+					<hr><br>
+					<img class="blog-foto" src="https://thediscerningcat.com/wp-content/uploads/2021/08/tabby-cat-with-wine-and-cheese.jpg" border="2px" height="250px" margin="20px" align="left" alt="неплохой сыр">
+					<span>сыр оказался весьма неплох, тонкий сырный вкус, плотный, приятный, но чегото не хватает не знаю чего<br> Оценка:7/10</span>
+				</article>
+				<hr>
+				<div class="flex-blog-comments">
+					<div class="blog-comments-item">
+						<img class="blog-icon" src="http://cdn.onlinewebfonts.com/svg/img_73674.png"><span style="vertical-align: middle; padding-top:4px; padding-left:0px;">53 нравки</span></div>
+					<div class="blog-comments-item">
+						<img class="blog-icon" src="http://simpleicon.com/wp-content/uploads/retweet.png"><span style="vertical-align: middle; padding-top:4px; padding-left:0px;">17 ремявок</span></div>
+					<div class="blog-comments-item">
+						<img class="blog-icon" src="https://www.nicepng.com/png/full/12-122557_loading-cat-comments-cat-icon-white-png.png"><span style="vertical-align: middle; padding-top:4px; padding-left:0px;">3 комментика</span></div>
+				</div>
+			</div>
+			
+			<div class="flex-box">
+				<article> 
+					<img class="blog-miniava" src="https://icdn.lenta.ru/images/2019/10/06/13/20191006135047104/square_1280_55d23da46a4b99f74eedbba9ec98aa80.jpg" border="1px" width="25px" margin="15px" align="left" alt="аватарка">
+					<span style="font-size: 22px;"><b> украл сыр в столовке итмо</b></span>
+					<hr><br>
+					<img class="blog-foto" src="https://i0.wp.com/cooperpetcare.com/wp-content/uploads/2021/04/can-cat-eat-cheese.jpg?fit=800%2C534&ssl=1" border="2px" height="250px" margin-left="20px" align="left" alt="сырная добыча">
+					<span>почти попавсь, но в итоге сбежал с добычей, не раскрыв свою личность</span>
+				</article>
+				<hr>
+				<div class="flex-blog-comments">
+					<div class="blog-comments-item">
+						<img class="blog-icon" src="http://cdn.onlinewebfonts.com/svg/img_73674.png"> <span style="vertical-align: middle; padding-top:4px; padding-left:0px;"> 128 нравок </span> </div>
+					<div class="blog-comments-item">
+						<img class="blog-icon" src="http://simpleicon.com/wp-content/uploads/retweet.png"> <span style="vertical-align: middle; padding-top:4px; padding-left:0px;">51 ремявка</span> </div>
+					<div class="blog-comments-item">
+						<img class="blog-icon" src="https://www.nicepng.com/png/full/12-122557_loading-cat-comments-cat-icon-white-png.png"><span style="vertical-align: middle; padding-top:4px; padding-left:0px;">24 комментика</span></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="flex-container" style="left: 0px;">
+			<div class="footer">
+				<span> Находясь на данной веб-странице, вы подтверждаете то, что не являетесь человечешкой<br><br> </span>
+				<span><u>все котьи права защищены.</u> </span>
+			</div>
+		</div>
+	</body>
+
+</html>
