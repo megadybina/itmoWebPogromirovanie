@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<meta charset="UTF-8"> <!-- кодировка символов документа-->
+		<meta name="description" lang="ru" content="Описание содержимого страницы">
+		<meta name="keywords" lang="ru" content="ключевые слова через запятую">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://combinatronics.com/megadybina/itmoWebPogromirovanie/main/lab2/kotogramStyle.css" type="text/css"/>  <!-- подключение стилей из файла -->
+		<script type="text/javascript" src="https://combinatronics.com/megadybina/itmoWebPogromirovanie/main/lab2/kotogramJS.js"></script>  <!-- подключение js из файла -->
+		
+		<title>kotogram</title> 
+		<link rel="icon" href="https://iconarchive.com/download/i95569/iconsmind/outline/Black-Cat.ico" type="image/x-icon">
+	</head>
+	
+	<body>
+		<div class="header">
+			<h1>Котограм</h1>
+			<div class="dropdown"> 
+			  <button class="menubtn" onclick="toggleMenu();">
+				<span class="menubtn-icon-line menubtn-icon-line_top" style="padding: 0;"></span>
+				<span class="menubtn-icon-line" style="padding: 0;"></span>
+				<span class="menubtn-icon-line menubtn-icon-line_bottom" style="padding: 0;"></span>
+			  </button>
+				<ul id="menu">
+					<li><a href="">Главная</a></li>
+					<li><a href="">Сообщество</a></li>
+					<li><a href="">Пользователи</a></li>
+					<li><a href="">Новое<div class="notification-circle">3</div> </a> </li>
+				</ul>
+			</div>  
+		</div>
+
+		<aside>
+			<p>Реклама заблокирована AdBlock</p>
+		</aside>
+
+		<div class="flex-container">
+			<div class="flex-profile-info">
+				<div class="flex-profile-item" style="padding-left: 10px;">
+					<img src="https://icdn.lenta.ru/images/2019/10/06/13/20191006135047104/square_1280_55d23da46a4b99f74eedbba9ec98aa80.jpg" border="2px" width="200px" margin="15px" align="left" alt="аватарка"></div>
+				<div class="flex-profile-item">
+					<span style="font-size: 27px;"><b>кот Котофей</b></span><br><br></div>
+				<div class="flex-profile-item">
+					<span style="font-size: 20px">Дата рождения: 27.08.2017</span><br><br></div>
+				<div class="flex-profile-item">
+					<span style="font-size: 20px">Профессия: сырный дегустатор</span><br><br></div>
+			</div>
+		</div>
+		
+		<div class="flex-blog">
+			<div class="flex-title">
+				<h3 style="padding: 10px">Стена записочек</h3>
+			</div>
+			<div class="flex-box">
+				<article> 
+					<img class="blog-miniava" src="https://icdn.lenta.ru/images/2019/10/06/13/20191006135047104/square_1280_55d23da46a4b99f74eedbba9ec98aa80.jpg" border="1px" margin="15px" align="left" alt="аватарка">
+					<span style="font-size: 22px;"><b>рецензия на сыр из столовки итмо</b></span>
+					<hr><br>
+					<img class="blog-foto" src="https://thediscerningcat.com/wp-content/uploads/2021/08/tabby-cat-with-wine-and-cheese.jpg" border="2px" height="250px" margin="20px" align="left" alt="неплохой сыр">
+					<span>сыр оказался весьма неплох, тонкий сырный вкус, плотный, приятный, но чегото не хватает не знаю чего<br> Оценка:7/10</span>
+				</article>
+				<hr>
+				<div class="flex-blog-comments">
+					<div class="blog-comments-item">
+						<img class="blog-icon" src="http://cdn.onlinewebfonts.com/svg/img_73674.png"><span style="vertical-align: middle; padding-top:4px; padding-left:0px;">53 нравки</span></div>
+					<div class="blog-comments-item">
+						<img class="blog-icon" src="http://simpleicon.com/wp-content/uploads/retweet.png"><span style="vertical-align: middle; padding-top:4px; padding-left:0px;">17 ремявок</span></div>
+					<div class="blog-comments-item">
+						<img class="blog-icon" src="https://www.nicepng.com/png/full/12-122557_loading-cat-comments-cat-icon-white-png.png"><span style="vertical-align: middle; padding-top:4px; padding-left:0px;">3 комментика</span></div>
+				</div>
+			</div>
+			
+			<div class="flex-box">
+				<article> 
+					<img class="blog-miniava" src="https://icdn.lenta.ru/images/2019/10/06/13/20191006135047104/square_1280_55d23da46a4b99f74eedbba9ec98aa80.jpg" border="1px" width="25px" margin="15px" align="left" alt="аватарка">
+					<span style="font-size: 22px;"><b> украл сыр в столовке итмо</b></span>
+					<hr><br>
+					<img class="blog-foto" src="https://i0.wp.com/cooperpetcare.com/wp-content/uploads/2021/04/can-cat-eat-cheese.jpg?fit=800%2C534&ssl=1" border="2px" height="250px" margin-left="20px" align="left" alt="сырная добыча">
+					<span>почти попавсь, но в итоге сбежал с добычей, не раскрыв свою личность</span>
+				</article>
+				<hr>
+				<div class="flex-blog-comments">
+					<div class="blog-comments-item">
+						<img class="blog-icon" src="http://cdn.onlinewebfonts.com/svg/img_73674.png"> <span style="vertical-align: middle; padding-top:4px; padding-left:0px;"> 128 нравок </span> </div>
+					<div class="blog-comments-item">
+						<img class="blog-icon" src="http://simpleicon.com/wp-content/uploads/retweet.png"> <span style="vertical-align: middle; padding-top:4px; padding-left:0px;">51 ремявка</span> </div>
+					<div class="blog-comments-item">
+						<img class="blog-icon" src="https://www.nicepng.com/png/full/12-122557_loading-cat-comments-cat-icon-white-png.png"><span style="vertical-align: middle; padding-top:4px; padding-left:0px;">24 комментика</span></div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="flex-container" style="left: 0px;">
+			<div class="footer">
+				<span> Находясь на данной веб-странице, вы подтверждаете то, что не являетесь человечешкой<br><br> </span>
+				<span><u>все котьи права защищены.</u> </span>
+			</div>
+		</div>
+	</body>
+
+</html>
